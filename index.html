@@ -48,6 +48,7 @@ button{font:inherit;color:inherit}
 .logo-mark{display:flex;align-items:center;gap:12px;text-decoration:none;white-space:nowrap}
 .logo-mark i{width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-style:normal;font-family:var(--display);font-size:22px;line-height:1;position:relative}
 .logo-mark i::after{content:"";position:absolute;right:8px;bottom:9px;width:6px;height:6px;border-radius:50%;background:var(--coral)}
+.logo-mark img{width:40px;height:40px;flex:none}
 .logo-mark b{font-size:14px;line-height:1.3;letter-spacing:.08em}
 .logo-mark b small{display:block;font-family:Inter;font-size:10px;letter-spacing:.2em;color:var(--sub);font-weight:700}
 .nav nav{margin-left:auto;display:flex;align-items:center;gap:20px;overflow-x:auto;scrollbar-width:none}
@@ -252,6 +253,15 @@ button{font:inherit;color:inherit}
 .contact .r a{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.6);border-radius:12px;padding:14px 18px;text-decoration:none;font-weight:800;transition:background .2s}
 .contact .r a:hover{background:#fff}
 .contact .r a::after{content:"→";color:var(--coral)}
+.cform{position:relative;z-index:1;display:grid;gap:6px}
+.cform label{font-size:14px;font-weight:800;margin-top:8px}
+.cform label em{font-style:normal;font-size:11px;background:var(--coral);color:#fff;border-radius:980px;padding:1px 8px;margin-left:8px;vertical-align:1px}
+.cform input,.cform textarea{font:inherit;font-size:16px;color:var(--navy);background:rgba(255,255,255,.85);border:1px solid transparent;border-radius:10px;padding:10px 14px;width:100%}
+.cform input:focus,.cform textarea:focus{background:#fff;border-color:var(--navy);outline:none}
+.cform textarea{resize:vertical;min-height:120px}
+.cform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.cform button{margin-top:14px;justify-self:start}
+.cf-status{margin:4px 0 0;font-size:14px;font-weight:700;min-height:1.5em}
 
 footer{padding-block:36px 44px;color:var(--sub);font-size:14px}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px}
@@ -379,7 +389,7 @@ dialog::backdrop{background:rgba(14,34,56,.55);backdrop-filter:blur(8px)}
 <!-- ===================== Navigation (single) ===================== -->
 <header class="nav" id="top">
   <div class="wrap">
-    <a class="logo-mark" href="#top" aria-label="ページの先頭へ"><i>M</i><b>麦林 亜輝子<small>PORTFOLIO</small></b></a>
+    <a class="logo-mark" href="#top" aria-label="ページの先頭へ"><img src="images/logo-mark.png" alt="" width="40" height="40"><b>麦林 亜輝子<small>PORTFOLIO</small></b></a>
     <nav aria-label="メイン">
       <a href="#about">概要</a>
       <a href="#numbers">実績</a>
@@ -407,7 +417,7 @@ dialog::backdrop{background:rgba(14,34,56,.55);backdrop-filter:blur(8px)}
       <h1 class="rv d1">マーケティング視点と<br>導線設計で成果を出す</h1>
       <div class="rule rv d2"></div>
       <p class="sub rv d2">販促・Web制作実績集</p>
-      <p class="catch rv d2">企画・構成 / ライティング / 導線設計 / デザインまで一気通貫で対応し、在宅で働く女性の制作チームをまとめ、育てます</p>
+      <p class="catch rv d2">企画・構成 / ライティング / 導線設計 / デザインまでシームレスに対応。在宅で働く女性の育成にも携わっています</p>
       <div class="cta rv d3">
         <a class="btn btn-coral arrow" href="#cases">代表事例を見る</a>
         <a class="btn btn-line" href="#contact">相談する</a>
@@ -427,13 +437,13 @@ dialog::backdrop{background:rgba(14,34,56,.55);backdrop-filter:blur(8px)}
 <section class="sec on-navy" id="numbers">
   <div class="wrap">
     <div class="sec-bar rv"><span class="en">NUMBERS</span></div>
-    <h2 class="h-l rv d1">数字で見る実績。</h2>
+    <h2 class="h-l rv d1">数字で見る実績</h2>
     <p class="lead rv d2">デザイン・ライティング・組織づくり、それぞれで出してきた成果です。</p>
     <dl class="stats" style="margin-top:48px">
       <div class="stat rv"><dt>LPコンペで採用された5本のうち、実際の広告運用での成約率（デザイン担当）</dt><dd data-count="1">1<small>位</small></dd></div>
       <div class="stat rv d1"><dt>EC出店者の販促支援で、担当店舗が獲得した雑誌・新聞・テレビの取材</dt><dd data-count="9">9<small>社</small></dd></div>
       <div class="stat rv d2"><dt>LINE公式アカウントの文章だけで得た、アフィリエイト報酬（月・最高／2019〜2020年）</dt><dd data-count="2081">2,081<small>万円</small></dd></div>
-      <div class="stat rv d3"><dt>オンラインで構築・統括した販売パートナー組織（うちリーダー21名を育成）</dt><dd data-count="294">294<small>名</small></dd></div>
+      <div class="stat rv d3"><dt>オンラインで構築・統括した販売パートナー組織（100名以上のチームを率いるリーダーをはじめ、リーダー・チーフ21名を育成）</dt><dd data-count="351">351<small>名</small></dd></div>
     </dl>
   </div>
 </section>
@@ -444,7 +454,7 @@ dialog::backdrop{background:rgba(14,34,56,.55);backdrop-filter:blur(8px)}
     <div class="sec-bar rv"><span class="en">ABOUT ME</span></div>
     <div class="about">
       <div>
-        <h2 class="h-l rv d1" style="margin-bottom:28px">課題から逆算して、<br><span class="coral">売れる流れ</span>をつくる。</h2>
+        <h2 class="h-l rv d1" style="margin-bottom:28px">課題から逆算して、<br><span class="coral">売れる流れ</span>をつくる</h2>
         <p class="quote rv d2">クライアントの成果にどこまでも誠実に向き合い、ビジネスも、ライフスタイルも、妥協せず挑戦し続ける</p>
       </div>
       <div class="body rv d2">
@@ -460,7 +470,7 @@ dialog::backdrop{background:rgba(14,34,56,.55);backdrop-filter:blur(8px)}
 <section class="sec alt" id="skills">
   <div class="wrap">
     <div class="sec-bar rv"><span class="en">SKILLS &amp; VISION</span></div>
-    <div class="sec-head"><h2 class="h-l rv d1">できること、<br>これから挑戦したいこと。</h2></div>
+    <div class="sec-head"><h2 class="h-l rv d1">できること、<br>これから挑戦したいこと</h2></div>
     <div class="cw">
       <div class="panel rv">
         <h3>できること</h3>
@@ -476,7 +486,7 @@ dialog::backdrop{background:rgba(14,34,56,.55);backdrop-filter:blur(8px)}
         <ol class="want">
           <li><b>地域の事業者の「売れる仕組み」づくり</b>各地のお店や生産者さんの課題を見つけ、販促とWeb・ECの導線を、企画から成果まで伴走して形にしたい。</li>
           <li><b>Web・EC運営を任せてもらえる存在に</b>制作の一部だけでなく、課題の発見から運用・改善までを自走して担当し、安心して任せてもらえる存在になりたい。</li>
-          <li><b>リモートで働く女性の育成・チームづくり</b>オンラインで最大294名の組織を運営し、6年間でリーダー21名を育ててきた経験を活かしたい。将来は、実務で身につけてきたWebマーケティングとデザインのスキルを、講座やOJTで伝える側にも挑戦したい。</li>
+          <li><b>リモートで働く女性の育成・チームづくり</b>オンラインで最大351名の組織を運営し、6年間で100名以上のチームを率いるリーダー2名、30名以上のチームを率いるリーダー3名、7名以上のチームをまとめるチーフ16名を育ててきた経験を活かしたい。将来は、実務で身につけてきたWebマーケティングとデザインのスキルを、講座やOJTで伝える側にも挑戦したい。</li>
         </ol>
       </div>
     </div>
@@ -487,7 +497,7 @@ dialog::backdrop{background:rgba(14,34,56,.55);backdrop-filter:blur(8px)}
 <section class="sec" id="strengths">
   <div class="wrap">
     <div class="sec-bar rv"><span class="en">STRENGTHS</span></div>
-    <div class="sec-head"><h2 class="h-l rv d1">4つの強み。</h2><p class="lead rv d2">事例番号を押すと、その事例の詳細が開きます。</p></div>
+    <div class="sec-head"><h2 class="h-l rv d1">4つの強み</h2><p class="lead rv d2">事例番号を押すと、その事例の詳細が開きます。</p></div>
     <div class="strengths" id="strengthGrid"></div>
   </div>
 </section>
@@ -496,7 +506,7 @@ dialog::backdrop{background:rgba(14,34,56,.55);backdrop-filter:blur(8px)}
 <section class="sec alt" id="process">
   <div class="wrap">
     <div class="sec-bar rv"><span class="en">MY PROCESS</span></div>
-    <div class="sec-head"><h2 class="h-l rv d1">担当できる範囲。</h2></div>
+    <div class="sec-head"><h2 class="h-l rv d1">担当できる範囲</h2></div>
     <ol class="process" id="processList"></ol>
     <p class="flow-note rv">うどん店で成功した「子ども応援チケット」を八百屋へ横展開したように、成果が出た仕組みはほかのクライアントにも応用しています。</p>
   </div>
@@ -506,7 +516,7 @@ dialog::backdrop{background:rgba(14,34,56,.55);backdrop-filter:blur(8px)}
 <section class="sec on-navy" id="cases">
   <div class="wrap">
     <div class="sec-bar rv"><span class="en">CASE STUDY</span></div>
-    <div class="sec-head"><h2 class="h-l rv d1">代表事例<span class="coral">。</span></h2><p class="lead rv d2">課題の整理から成果まで、一気通貫で担当した6件です。カードを押すと「課題 → 施策 → 成果」の詳細が開きます。</p></div>
+    <div class="sec-head"><h2 class="h-l rv d1">代表事例</h2><p class="lead rv d2">課題の整理から成果まで、一気通貫で担当した6件です。カードを押すと「課題 → 施策 → 成果」の詳細が開きます。</p></div>
     <div class="cases" id="caseGrid"></div>
   </div>
 </section>
@@ -515,7 +525,7 @@ dialog::backdrop{background:rgba(14,34,56,.55);backdrop-filter:blur(8px)}
 <section class="sec" id="flyers">
   <div class="wrap">
     <div class="sec-bar rv"><span class="en">FLYERS</span></div>
-    <div class="sec-head"><h2 class="h-l rv d1">チラシ。</h2><p class="lead rv d2">紙の販促物。配って終わりにせず、申込み・購入まで進む流れを設計しています。</p></div>
+    <div class="sec-head"><h2 class="h-l rv d1">チラシ</h2><p class="lead rv d2">紙の販促物。配って終わりにせず、申込み・購入まで進む流れを設計しています。</p></div>
     <div class="cases" id="flyerGrid"></div>
   </div>
 </section>
@@ -524,7 +534,7 @@ dialog::backdrop{background:rgba(14,34,56,.55);backdrop-filter:blur(8px)}
 <section class="sec alt" id="lp">
   <div class="wrap">
     <div class="sec-bar rv"><span class="en">LANDING PAGE</span></div>
-    <div class="sec-head"><h2 class="h-l rv d1">LP。</h2></div>
+    <div class="sec-head"><h2 class="h-l rv d1">LP</h2></div>
     <div class="lp2" id="lpBlock"></div>
   </div>
 </section>
@@ -533,7 +543,7 @@ dialog::backdrop{background:rgba(14,34,56,.55);backdrop-filter:blur(8px)}
 <section class="sec" id="mv">
   <div class="wrap">
     <div class="sec-bar rv"><span class="en">MAIN VISUAL</span></div>
-    <div class="sec-head"><h2 class="h-l rv d1">HPメインビジュアル。</h2><p class="lead rv d2">ファーストビュー（PC・スマホ連動）。画像をクリックすると拡大します。</p></div>
+    <div class="sec-head"><h2 class="h-l rv d1">HPメインビジュアル</h2><p class="lead rv d2">ファーストビュー（PC・スマホ連動）。画像をクリックすると拡大します。</p></div>
     <div class="gal" id="mvGrid"></div>
   </div>
 </section>
@@ -542,7 +552,7 @@ dialog::backdrop{background:rgba(14,34,56,.55);backdrop-filter:blur(8px)}
 <section class="sec alt" id="ec">
   <div class="wrap">
     <div class="sec-bar rv"><span class="en">EC IMAGES</span></div>
-    <div class="sec-head"><h2 class="h-l rv d1">EC商品画像。</h2><p class="lead rv d2">通販の商品ページ用画像です。</p></div>
+    <div class="sec-head"><h2 class="h-l rv d1">EC商品画像</h2><p class="lead rv d2">通販の商品ページ用画像です。</p></div>
     <div class="gal two" id="ecGrid"></div>
   </div>
 </section>
@@ -551,7 +561,7 @@ dialog::backdrop{background:rgba(14,34,56,.55);backdrop-filter:blur(8px)}
 <section class="sec" id="logo">
   <div class="wrap">
     <div class="sec-bar rv"><span class="en">LOGO DESIGN</span></div>
-    <div class="sec-head"><h2 class="h-l rv d1">ロゴ。</h2></div>
+    <div class="sec-head"><h2 class="h-l rv d1">ロゴ</h2></div>
     <div class="logo-proc rv" id="logoProc"></div>
     <div class="logos" id="logoGrid"></div>
   </div>
@@ -570,11 +580,18 @@ dialog::backdrop{background:rgba(14,34,56,.55);backdrop-filter:blur(8px)}
         </div>
       </div>
       <div class="r">
-        <h3>QUICK LINKS</h3>
-        <a href="#numbers">数字で見る実績</a>
-        <a href="#strengths">4つの強み</a>
-        <a href="#cases">代表事例（課題 → 施策 → 成果）</a>
-        <a href="#mv">HPメインビジュアル</a>
+        <h3>CONTACT FORM</h3>
+        <form class="cform" id="contactForm" novalidate>
+          <label for="cf-name">お名前<em>必須</em></label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" required>
+          <label for="cf-email">メールアドレス<em>必須</em></label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" required>
+          <label for="cf-msg">ご相談内容<em>必須</em></label>
+          <textarea id="cf-msg" name="message" rows="5" required></textarea>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+          <button class="btn btn-navy" type="submit">送信する</button>
+          <p class="cf-status" id="cfStatus" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </div>
   </div>
@@ -626,8 +643,9 @@ dialog::backdrop{background:rgba(14,34,56,.55);backdrop-filter:blur(8px)}
    CONTENT (original portfolio text & images)
    ========================================================= */
 const CONTACT_EMAIL = ""; // ← 例: "hello@example.com"。空欄の間は「メールで相談する」ボタンを非表示
+const FORM_ENDPOINT = ""; // ← Formspreeなどで発行した送信先URL（例: "https://formspree.io/f/xxxxxxx"）
 
-const DATA = {"cases":[{"id":"manekuru","group":"case","num":"No.01","title":"プログラミングスクール 無料オープンキャンパスLP","tag":"LP・Web広告","client":"マネクル様 LPコンペ採用作品（原稿・写真はクライアント支給）","spec":"LP（スマホ向け縦長・全ページ）","lp":"images/manekuru-lp.jpg","main":[{"src":"images/manekuru-lp.jpg","cap":"LP全体"}],"headline":"コンペで採用された5本のLPのうち、実際の広告運用で成約率1位","story":"クライアントから支給されたのは、Wordに貼られた文章と写真のみ。そこからLP全体のデザインを担当し、コンペで採用された。実際の広告運用では、同時に採用された5本のLPの中で最も高い成約率を記録。同じ原稿でもデザインの力で成果が変わることを、数字で示せた事例。","points":["成約率1位（採用5本中）","デザインのみで成果に差","実際の広告運用で検証"],"subs":[],"brief":[["GOAL",["無料オープンキャンパス（LINE登録）への申込み獲得","広告から来た人の成約率を最大化する"]],["TARGET","本業を続けながら、未経験からプログラミングを学んでフリーランスや転職を目指したい社会人。"],["CONCEPT","文字だけの原稿を、見出し・強調・アイコン・図解で整理し、スマホでも流し読みで要点が入るデザインに。ファーストビューでは「未経験OK・時短学習・自宅学習」を大きく見せ、視線が上から下へ自然に流れる配置で、LINE登録ボタンまで迷わず読み進められるようにした。"],["RESULT",["コンペで採用された5本のLPのうち、実際の広告運用で成約率1位"]]],"credit":"デザイン（原稿・写真はクライアント支給）","note":""},{"id":"gyoza","group":"case","num":"No.02","title":"東京餃子楼 ECサイトのメインビジュアル・商品ページ","tag":"食品・ECサイト","client":"東京餃子楼様","spec":"トップページ メインビジュアル（PC・スマホ連動）・商品ページ画像一式","main":[{"src":"images/gyoza-sp.jpg","cap":"トップページ メインビジュアル（スマホ版）"}],"headline":"ブランドの世界観を保ったまま、トップページから購入までを1本のストーリーで設計","story":"トップページのメインビジュアルで「銘柄豚 岩中豚100%」「無添加野菜」という素材の強みを示し、詳細・通販ページへの遷移を促した。遷移先の商品ページでは、メインビジュアルと同じ世界観の商品サムネイルに続けて、岩中豚と国産野菜の強み、他社との比較表、店舗の歴史までを一つの流れとして構成。デザインだけでなく、売上をつくるための構成・ライティングまで一貫して担当した。","points":["トップから購入までの導線","比較表で違いを見える化","構成・ライティングまで一貫"],"subs":[{"src":"images/gyoza-pc.jpg","cap":"メインビジュアル（PC版）","desc":"横長・縦長のどちらでも中央の文字が読めるよう、写真と文字の配置をデバイスごとに調整。","wide":true},{"src":"images/gyoza-ec.jpg","cap":"商品ページ画像","desc":"商品サムネイル、岩中豚の強み、国産野菜・小麦、比較表、店舗の歴史、ポイント還元までを順に見せる構成。","wide":true}],"brief":[["GOAL",["サイト訪問者に店舗とブランドを知ってもらう","「岩中豚」「無添加野菜」という素材の強みを伝え、詳細・通販ページへの遷移数を増やす","商品ページで違いを伝え、購入意欲を高める"]],["TARGET","素材や添加物にこだわり、自宅でも本格的な餃子を家族で楽しみたい人。"],["CONCEPT","食欲をそそる赤（暖色）をベースに、楽しさやワクワク感を演出するイエローをアクセントに配色。PC版の横長・スマホ版の縦長それぞれで中央の文字の読みやすさを保ちつつ、主役の餃子の写真が最も引き立つようにレイアウトを調整した。"]],"credit":"ディレクション／企画・構成・ライティング／デザイン","note":""},{"id":"udon","group":"case","num":"No.03","title":"子ども応援チケット 新規販促プロモーション","tag":"店舗ブランディング・集客","client":"讃岐うどん やまと（うどん大和・東京都板橋区）","spec":"A1ポスター・A4チラシ2種・応援チケット／台紙","main":[{"src":"images/udon-poster.jpg","cap":"A1ポスター（メイン）"}],"headline":"子ども応援チケットで親子連れの来店きっかけをつくり、リピートにつなげる店舗販促","story":"会社員男性が中心だった客層に、親子連れを呼び込むための施策として「子ども応援チケット」を企画。店頭のA1ポスターと、「使う人」「寄付で買う人」それぞれに向けた2種のチラシで来店のきっかけをつくった。アプリのスタンプカード（貯めると天ぷら無料）と組み合わせて再来店につなげ、客単価の向上とリピート来店の促進に貢献した。","points":["親子連れの新規来店","利用と寄付の循環","スタンプカードでリピート"],"subs":[{"src":"images/udon-flyer-a.jpg","cap":"A4チラシ｜支援者向け","desc":"「一緒に応援してください」と寄付購入をお願いする版。うどん小1杯500円から応援できることを明記。","wide":false},{"src":"images/udon-flyer-b.jpg","cap":"A4チラシ｜利用者向け","desc":"「チケットを使ってください」と親子での来店を促す版。使い方を3コマで見せ、「うどん小1杯無料」を大きく。","wide":false},{"src":"images/udon-ticket.jpg","cap":"子ども応援チケットと台紙（見本）","desc":"実際に使っていたチケット。台紙に貼り、感謝の気持ちを書いて店内に掲示できる。","wide":false},{"src":"images/udon-store.jpg","cap":"実店舗での掲載風景","desc":"店頭にポスター、店内の窓一面に応援チケットが並ぶ。（写真：食べログより引用）","wide":false}],"brief":[["GOAL",["新規客の獲得","客単価アップ","地域の子育て応援施策を知ってもらい、「利用する人」と「寄付で買う人」の循環をつくる"]],["TARGET","保育園のお迎え帰りで疲れているママ・パパ（利用者）と、取り組みに共感してくれる店舗近くの住民・事業者（支援者）。メインの客層だった会社員男性以外の、親子連れを取り込む。"],["CONCEPT","A1ポスター（グリーン）は、お迎え後にクタクタのママが「気になる」「立ち止まって読みたくなる」ことを目指し、「ごはんの用意も片付けもしなくていい。」と語りかけた。A4チラシ（水玉柄）は「チケットを使ってね」「チケットを買って寄付してね」の2パターンを企画・ライティングし、店舗近くの不動産屋・小児科・歯医者・保育園などにポスティング。親子連れを取り込む店舗のトータルディレクションを行った。"]],"credit":"ディレクション／企画・構成・ライティング（すべてのキャッチコピー・文章）／チラシデザイン","note":"※ 本店舗は移転・リニューアルのため現在は閉店し、オーナー様は別の場所で新店舗を盛況に営業されています。"},{"id":"noguchi","group":"case","num":"No.04","title":"オーガニック八百屋 販促・SDGs企画","tag":"地域循環プロジェクト・販促","client":"京都の野菜専門店 マルシェノグチ","spec":"A4チラシ2種・新聞メディア掲載","main":[{"src":"images/noguchi-kids.jpg","cap":"子ども応援スムージー チラシ"}],"headline":"ECサイト構築からメディア取材獲得までつなげた店舗ブランディング","story":"ツクツク！でのECサイト立ち上げから、店頭施策・ファン化施策までを一気通貫で伴走支援。店主様の想いを形にした「子ども応援チケット」を企画・発信した結果、SNSでの拡散やコミュニティ化にとどまらず、関西テレビ『となりの人間国宝さん』出演や『京都新聞』掲載など大きなメディア反響を獲得。リアル店舗からオンライン（定期宅配）への継続顧客の獲得を実現した。","points":["EC立ち上げから伴走","一気通貫ディレクション","メディア露出の獲得","店舗→定期宅配への導線"],"subs":[{"src":"images/noguchi-veg.jpg","cap":"旬のおまかせ野菜セット チラシ","desc":"実際の商品写真を使い、どんな野菜が届くのかイメージしやすいナチュラルなトーンに。","wide":false},{"src":"images/noguchi-news.jpg","cap":"京都新聞 掲載（2024年6月4日）","desc":"子ども応援スムージーの取り組みが紙面で紹介された。","wide":false}],"brief":[["GOAL",["旬のお野菜セットの新規定期購入の獲得","飲食店「うどん大和」で成功した地域貢献の仕組みを八百屋に横展開し、「子ども応援スムージー」として仕組み化・認知拡大する"]],["TARGET","安心できる有機野菜を食卓に取り入れたい家庭。子ども応援チラシは、すでに取り組みを知っている店舗周辺の住民・事業者。"],["CONCEPT","子育て応援チラシでは、チケットを手に笑う子どもたちの写真と「813杯提供」の実績で、取り組みが続いていることを可視化。配布先は仕組みを知っている方が多いため説明は割愛し、応援チケットの購入を促すことに絞った。"],["RESULT",["2024年、年間813杯のスムージーを子どもたちへ提供","『京都新聞』をはじめ複数のメディアに掲載","オーガニック検索からのサイト訪問をきっかけに、関西テレビ『よ～いドン！』の人気コーナー「となりの人間国宝さん」に出演。SEO対策が成果につながった"]]],"credit":"ディレクション／ECサイト立ち上げ支援（ツクツク！）／企画・構成・ライティング（すべてのキャッチコピー・文章）／デザイン","note":""},{"id":"corn","group":"case","num":"No.05","title":"高原とうもろこし「サニーショコラ」販促ツール","tag":"農業・販促","client":"信州 根羽村のとうもろこし農家","spec":"販促チラシ（表・裏）・美味しい食べ方ガイド・FAX注文用紙2種","main":[{"src":"images/corn-front.jpg","cap":"STEP 1｜販促チラシ 表面"}],"headline":"ターゲット別の3ステップ導線で、リピート率と顧客単価を最大化","story":"単発のチラシ配布で終わらせず、「認知・新規獲得」「同梱（美味しい食べ方・保存方法）」「定期便・リピート案内」という顧客育成シナリオにもとづき、3種類のツールを一括で提案。1つのクライアント様に対し、購入プロセスの各フェーズに合わせたデザインとコンテンツを展開し、LTV（顧客生涯価値）の向上に貢献した。","points":["顧客育成シナリオ設計","3種類の一括提案","LTV向上"],"subs":[{"src":"images/corn-back.jpg","cap":"STEP 1｜販促チラシ 裏面（認知・新規獲得）","desc":"根羽村の標高・寒暖差・森と水が甘さを育てることを、地図と3つの特徴で説明。","wide":false},{"src":"images/corn-guide.jpg","cap":"STEP 2｜美味しい食べ方と保存方法（商品に同梱）","desc":"イラストを多用し、調理法と保存方法が直感的にわかるガイドに。","wide":false},{"src":"images/corn-order-home.jpg","cap":"STEP 3｜FAX注文用紙・ご自宅用（リピート案内）","desc":"ご年配の方でも迷わず手書きできるよう、記入欄を広く確保。（振込先は伏せています）","wide":false},{"src":"images/corn-order-gift.jpg","cap":"STEP 3｜FAX注文用紙・贈答用（リピート案内）","desc":"お届け先が2件書けるよう「自宅用」と用紙を分けた。","wide":false}],"brief":[["GOAL",["購入者のリピート・口コミ促進","一件あたりの注文単価アップ","美味しい食べ方の提案","インターネットでの購入が苦手なシニア層からのFAX注文獲得"]],["TARGET","一度購入してくれたお客様（自宅用・贈答用のリピート）と、インターネットでの注文が苦手なシニア層。"],["CONCEPT","販促チラシでは、サニーショコラの魅力と、根羽村の高原と豊かな自然の中で育つからこそ生まれる甘みを表現。食べ方と保存方法のガイドはイラストで直感的に。FAX注文用紙は「自宅用」と「贈答用」を分け、十分な記入スペースを確保した。"]],"credit":"ディレクション／企画・構成・ライティング（キャッチコピー・文章作成）／チラシデザイン","note":""},{"id":"monokoto","group":"case","num":"No.06","title":"モノコトクリエ トップページ メインビジュアル","tag":"ホームページ制作・EC運営","client":"モノコトクリエ（まちのホームページ屋さん）","spec":"トップページ メインビジュアル 2パターン・ユーザー検証","main":[{"src":"images/monokoto-a.jpg","cap":"パターンA（スプラッシュ）"}],"headline":"2案をユーザー37名で検証し、主観ではなくユーザーの反応でデザインを決定","story":"クリエイティブ集団としての独自性・先進性を示すため、コンセプトの異なる2パターンを制作。実際のユーザー37名へのヒアリングで反応を定量・定性の両面から検証し、サイトの滞在時間と認知拡大に最も寄与するビジュアルを選んだ。","points":["2案の比較検証","ユーザー37名へのヒアリング","反応にもとづく意思決定"],"subs":[{"src":"images/monokoto-b.jpg","cap":"パターンB（レトロポップ）","desc":"イエロー背景とレトロな質感で、親しみやすさと楽しさを演出。","wide":true}],"brief":[["GOAL",["クリエイティブ集団としての独自性・先進性を示す","ターゲットの反応を検証し、滞在時間と認知拡大に最も寄与するビジュアルを選ぶ"]],["TARGET","新しい商品やサービスを売り出したい中小事業者・個人事業主。"],["CONCEPT","パターンA（スプラッシュ）は鮮やかなピンクとブルーで躍動感と先進性を表現し、検証ではターゲット層から高い評価と視覚的なインパクトを得た。パターンB（レトロポップ）はイエロー背景とレトロな質感で親しみやすさを演出。双方の検証を通じて、ユーザーのリアルな反応という事実にもとづいて最終デザインを決めた。"]],"credit":"ディレクション／企画・構成／デザイン／ユーザー検証","note":""},{"id":"olive","group":"flyer","num":"No.07","title":"最高峰EXVオリーブオイル 販促チラシ","tag":"調味料・販促","client":"株式会社ユーロパス × ファミリア・ズッカルディ","spec":"チラシ（表・裏）","main":[{"src":"images/olive-front.jpg","cap":"表面"}],"headline":"商品の付加価値を高め、EC・店頭での購買につなげる品質訴求","story":"一般的なオイルとの違い（無農薬栽培・早摘み・コールドプレス製法・母乳と同じオレイン酸）を裏面で6つの特長として整理し、高価格帯でも納得して購入いただけるストーリー構成を設計。「離乳食にそのまま使える」と具体的な使い道を示して購入のハードルを下げ、「家族の健康に投資するオイル」というコピーで毎日使い続ける理由を提示。表面に価格・送料無料・QRコードを集約し、手に取ったその場でECサイトへ進める導線をつくった。","points":["品質の差別化","脳科学にもとづく写真選び","その場でECへ進める導線"],"subs":[{"src":"images/olive-back.jpg","cap":"裏面","desc":"7年かけて開発した生産者の想いと、6つの特長をアイコンで整理。読む順に納得できる構成に。","wide":true}],"brief":[["GOAL",["国際コンテスト最優秀賞受賞・3つ星ホテル採用の生産者ズッカルディと、ユーロパス酒見さんのコラボ商品を国内で知ってもらう","ECサイトへの誘導"]],["TARGET","離乳食期の赤ちゃんを育てる家庭。子どもが口にするものの品質や安全性を大切にする保護者。"],["CONCEPT","ママは赤ちゃんの写真に惹かれやすいという脳科学的な傾向をふまえ、表面には赤ちゃんの笑顔の写真を大きく配置し、視線が商品と価格へ流れるように構成。そのうえで「世界最高峰の品質」という圧倒的な実績を表現。裏面では「我が子に安心して食べさせたい」と7年かけて開発した生産者の想いが、すぐに伝わるようにライティングした。高級感と親近感を両立させ、購入への納得感をつくっている。"]],"credit":"ディレクション／企画・構成・ライティング（すべてのキャッチコピー・文章）／チラシデザイン","note":"※ 紙面上の「送料無料」表記は制作当時のものです。現在のECサイトでは「1万円以上で送料無料」となっています。"},{"id":"hata","group":"flyer","num":"No.08","title":"端午の節句「名前旗」販売促進チラシ","tag":"伝統工芸品・通販","client":"京都西陣織元 もりさん","spec":"チラシ（片面）","main":[{"src":"images/hata.jpg","cap":"名前旗 チラシ"}],"headline":"オフライン配布からWeb・EC購入へのハードルを下げる導線設計","story":"安産祈願の名所・水天宮前での手渡し配布を想定し、認知にとどまらずECサイトでの注文獲得を狙った販促施策。高級感と信頼感を生むビジュアルに加え、購入時のサイズの不安や注文手順をステップ化して分かりやすく整理。Web購入への心理的な障壁を取り除く構成・ライティングを主導し、コンバージョン獲得に貢献した。","points":["オフライン→ECの導線設計","購入の不安を解消する構成","構成・ライティングを主導"],"subs":[],"brief":[["GOAL",["戌の日に水天宮前でプレママやご家族へ配布し、初節句を迎える家庭（親御様・祖父母様）に知ってもらう","豪華な購入者特典をフックに、ECサイトでの注文を獲得する"]],["TARGET","出産を控えたプレママとそのご家族。初めての節句を迎える家庭の親御様・祖父母様。"],["CONCEPT","ママやご家族が本能的に惹かれる赤ちゃんの笑顔の写真を主役に置き、視線が名前旗と価格・特典へ流れる配置に。京都西陣織や立体刺繍の「高級感・特別感」を伝えるため、和モダンで洗練された世界観に統一。購入時に迷いやすいサイズ感や注文手順をステップ形式で整理し、Web注文への心理的なハードルを下げる動線を設計した。"]],"credit":"ディレクション／企画・構成・ライティング（すべてのキャッチコピー・文章）／デザイン","note":""},{"id":"apple","group":"flyer","num":"No.09","title":"産地直送りんご 予約販売チラシ","tag":"農業・販促","client":"MORIMORI FARM（青森県弘前市）","spec":"チラシ（片面）・ロゴ","main":[{"src":"images/apple.jpg","cap":"予約販売チラシ"}],"headline":"産地・商品の差別化による購買意欲の喚起と、直販・ECへの導線","story":"他のりんごとの違い（味・こだわり・希少性）がひと目で伝わるキャッチコピーと構成で差別化。購入後の満足感をイメージさせるビジュアル展開により、贈答用・自分用の両方の需要を掘り起こし、直売所やECサイトでの注文獲得へと誘導した。","points":["商品の差別化","贈答用・自分用の需要喚起","直売所・ECへの導線"],"subs":[],"brief":[["GOAL",["数量限定の予約販売（5kg・4,000円）の注文獲得","樹齢80年の歴史やこだわりといった生産背景を伝え、ファンを増やす"]],["TARGET","旬の果物を産地から直接取り寄せたい家庭。つくり手の顔が見える食べものを選びたい人。"],["CONCEPT","りんごのシズル感を大胆に押し出しつつ、生産者の笑顔や岩木山の景色の写真を交えて「安心感・ブランドストーリー」を情緒的に表現。下部に価格やQRコードなどの必要情報をすっきり集約し、直感的に買いやすくした。"]],"credit":"ディレクション／企画・構成・ライティング（キャッチコピー・文章作成）／チラシ・ロゴデザイン","note":""},{"id":"rugby","group":"flyer","num":"No.10","title":"タグラグビーチーム 部員募集・体験会告知","tag":"スポーツ・部員募集","client":"都跡タグラグビークラブ","spec":"チラシ（片面）","main":[{"src":"images/rugby.jpg","cap":"部員募集チラシ"}],"headline":"保護者・子どものハードルを下げ、認知と体験参加を獲得","story":"「怪我をしそう」「難しそう」という保護者の懸念を払拭するため、安全性の高さと楽しさを前面に出した親しみやすい構成を提示。子どもが直感的に「楽しそう！」と感じるビジュアルと、保護者が安心して体験会に参加させられる情報設計で、新規部員の獲得と体験参加への誘導に貢献した。","points":["保護者の不安を解消","体験会への誘導","新規部員の獲得"],"subs":[],"brief":[["GOAL",["地域の小学生と保護者への認知拡大","体験会への参加と、新規入部者の獲得"]],["TARGET","地域の小学1〜6年生と、入部を検討するその保護者。"],["CONCEPT","子どもたちの躍動感あふれる写真をメインに配し、チームの「楽しさ」と「活気」を直感的にアピール。保護者が最も気にする「対象学年」「費用」「練習日時」などの必須情報を明確に整理し、親しみやすさと安心感を両立させた。"]],"credit":"ディレクション／企画・構成・ライティング（キャッチコピー・文章作成）／デザイン","note":""}],"lp":{"src":"images/logical-cooking-lp.jpg","cat":"料理教室・無料メール講座","title":"東大式ロジカルクッキング 無料メール講座LP","credit":"ライティング／デザイン／集客導線設計／ロゴデザイン","desc":["「感覚やセンスに頼らなくても料理は上達する」という講座の考え方を軸に、メディア掲載実績 → 料理の悩み → 解決策 → 選ばれる理由 → お客さまの声 → 登録特典 → 開発者メッセージの順に構成。無料メール講座への登録ボタンを複数の位置に置き、読み進めた先で迷わず申し込めるようにした。","講座のロゴ「Logical Cooking」も制作し、LPとロゴで世界観を揃えた。"],"url":"https://yukakosakai.com/logical_cooking/","urlText":"yukakosakai.com/logical_cooking/"},"mv":[{"cat":"いちご狩り体験予約・通販","title":"大谷農園様 トップページ","shots":[{"src":"images/otani-pc.jpg","cap":"大谷農園 PC版"},{"src":"images/otani-sp.jpg","cap":"大谷農園 スマホ版"}],"rows":[["目的","いちご狩りのシーズンオープンに合わせた新規予約の獲得と、ファミリー層・観光客への認知拡大。"],["工夫","主役のいちごの「みずみずしさ」を最優先に、大粒のいちごを大胆に配置。子育て世代やカップルが「行ってみたい」と直感的に思える安心感とワクワク感を両立した。"]],"link":null,"pair":true},{"cat":"観光サイト","title":"古都奈良おでかけ旅ガイド","shots":[{"src":"images/mv-nara.jpg","cap":"古都奈良おでかけ旅ガイド PC・スマホ"}],"rows":[["目的","奈良の観光情報・おでかけプランを探す人の目を引き、メディアとしての認知度と回遊率を上げる。"],["工夫","奈良の歴史と自然を感じる落ち着いたアースカラーの和モダン。文字を中央に、左右に旅の場面を置き、PC・スマホどちらでトリミングされてもキャッチコピーが読めるよう調整した。ロゴも制作。"]],"link":null,"pair":false},{"cat":"オンライン講座","title":"オンライン腸活講座","shots":[{"src":"images/mv-choukatsu.jpg","cap":"オンライン腸活講座 PC・スマホ"}],"rows":[["目的","健康意識の高い層に知ってもらい、講座への申込みにつなげる。"],["工夫","新鮮な食材のシズル感を主役に、ナチュラルで清潔感のある世界観に。PC・スマホの両方でキャッチコピーとレイアウトが崩れないよう設計した。"]],"link":null,"pair":false},{"cat":"オンラインレッスン","title":"ロースイーツ オンラインレッスン","shots":[{"src":"images/mv-rawsweets.jpg","cap":"ロースイーツ オンラインレッスン PC版"}],"rows":[["目的","ブランドの「幸福感」「上質さ」を伝え、女性のターゲット層の興味を引く。"],["工夫","淡いピンクのグラデーションとスイーツの配置を融合。余白を大胆に使った上品な文字配置で、大人かわいい世界観を表現した。"]],"link":null,"pair":false},{"cat":"ジュエリー","title":"アクセサリー作家さん","shots":[{"src":"images/mv-accessory.jpg","cap":"アクセサリー作家さん PC・スマホ"}],"rows":[["目的","高価格帯のジュエリーを求める人に向けて、ブランドの信頼感をつくる。"],["工夫","天然石ジュエリーの輝きを引き立てるミニマルなレイアウト。PC・スマホそれぞれで、静けさの中にある高級感を表現した。"]],"link":null,"pair":false},{"cat":"エステサロン","title":"横浜のエステサロン","shots":[{"src":"images/mv-esthe.jpg","cap":"エステサロン PC版 2パターン"}],"rows":[["目的","抜け感がなく重たい印象だった既存の自社サイトを改善し、女性が親しみを持ちやすいサロンに見せる。"],["工夫","余白を活かした軽やかなトーンに一新。「バイバイ、辛かったダイエット。」のコピーとともに、辛くないダイエットができることを印象づけた。"]],"link":null,"pair":false},{"cat":"ファッションスタイリスト","title":"ファッションスタイリスト MAYA様","shots":[{"src":"images/mv-maya.jpg","cap":"ファッションスタイリスト PC版"}],"rows":[["目的","スタイリストとしての世界観とセンスを、ひと目で伝える。"],["工夫","雑誌から出てきたようなファッショナブルなデザインを意識。MAYAさんのベースカラーであるブラックを基調にまとめた。"]],"link":null,"pair":false},{"cat":"Web集客支援","title":"TipSeed","shots":[{"src":"images/mv-tipseed.jpg","cap":"TipSeed PC・スマホ"}],"rows":[["目的","中小企業が集客の悩みを気軽に相談できる窓口として、信頼してもらう。"],["工夫","集客施策を手軽に取り入れられる親しみやすさと、「プロに任せられる」と感じる信頼感を両立したデザインにした。"]],"link":null,"pair":false},{"cat":"伝統工芸品・通販","title":"京都西陣織元 もりさん","shots":[{"src":"images/mv-morisan.jpg","cap":"もりさん PC・スマホ"}],"rows":[["目的","孫や子どもへの節句・お祝いに贈るのにふさわしい商品であることを伝える。"],["工夫","経済産業大臣指定伝統的工芸品 西陣織『伝統工芸士』の技が光る特別な贈り物であることを、重厚感のあるデザインで表現した。"]],"link":{"href":"#hata","text":"名前旗チラシ（No.08）と同じクライアントです。紙とWebで世界観を揃えています。"},"pair":false}],"ec":[{"cat":"農園・通販","title":"大谷農園様 通販商品ページ画像","shots":[{"src":"images/otani-ec.jpg","cap":"大谷農園 通販商品ページ画像"}],"rows":[["内容","無添加いちご酵素シロップと芋かりんとうの商品画像。成分・原材料の見せ方、かんたんレシピ、製造工程の写真まで、購入前の不安を順に解消する構成にした。"]],"link":{"href":"#mv","text":"同じ農園のトップページも制作しています。"},"pair":false},{"cat":"食品・ECサイト","title":"東京餃子楼様 商品ページ画像","shots":[{"src":"images/gyoza-ec.jpg","cap":"東京餃子楼 商品ページ画像"}],"rows":[],"link":{"href":"#gyoza","text":"詳しい設計のねらいは、代表事例 No.02 に掲載しています。"},"pair":false}],"logoProc":{"title":"おむすびカフェ 皐月屋 伏見宿｜5つの方向性を提案し、案2を採用","desc":"親しみやすさ、和の上品さ、モダン、筆文字など、方向性の違う5案を用意し、クライアントと一緒に比較しながらお店の世界観を決めていきました。","items":[{"src":"images/satsukiya-1.png","cap":"案1","adopted":false},{"src":"images/satsukiya-2.png","cap":"案2","adopted":true},{"src":"images/satsukiya-3.png","cap":"案3","adopted":false},{"src":"images/satsukiya-4.png","cap":"案4","adopted":false},{"src":"images/satsukiya-5.png","cap":"案5","adopted":false}]},"logos":[{"src":"images/logo-logical-cooking.png","cap":"東大式ロジカルクッキング"},{"src":"images/logo-nara-guide.png","cap":"古都奈良おでかけ旅ガイド"},{"src":"images/logo-monokoto.png","cap":"モノコトクリエ"},{"src":"images/logo-sekka.png","cap":"石華工房"},{"src":"images/logo-seo-monsters.png","cap":"SEO MONSTERS"},{"src":"images/logo-ogawa-photo.png","cap":"Ogawa Photo Works"},{"src":"images/logo-kamimura.png","cap":"不登校児ゼロ教師 かみむらこうすけ"}]};
+const DATA = {"cases":[{"id":"manekuru","group":"case","num":"No.01","title":"プログラミングスクール 無料オープンキャンパスLP","tag":"LP・Web広告","client":"マネクル様 LPコンペ採用作品（原稿・写真はクライアント支給）","spec":"LP（スマホ向け縦長・全ページ）","lp":"images/manekuru-lp.jpg","main":[{"src":"images/manekuru-lp.jpg","cap":"LP全体"}],"headline":"コンペで採用された5本のLPのうち、実際の広告運用で成約率1位","story":"クライアントから支給されたのは、Wordに貼られた文章と写真のみ。そこからLP全体のデザインを担当し、コンペで採用された。実際の広告運用では、同時に採用された5本のLPの中で最も高い成約率を記録。同じ原稿でもデザインの力で成果が変わることを、数字で示せた事例。","points":["成約率1位（採用5本中）","デザインのみで成果に差","実際の広告運用で検証"],"subs":[],"brief":[["GOAL",["無料オープンキャンパス（LINE登録）への申込み獲得","広告から来た人の成約率を最大化する"]],["TARGET","本業を続けながら、未経験からプログラミングを学んでフリーランスや転職を目指したい社会人。"],["CONCEPT","文字だけの原稿を、見出し・強調・アイコン・図解で整理し、スマホでも流し読みで要点が入るデザインに。ファーストビューでは「未経験OK・時短学習・自宅学習」を大きく見せ、視線が上から下へ自然に流れる配置で、LINE登録ボタンまで迷わず読み進められるようにした。"],["RESULT",["コンペで採用された5本のLPのうち、実際の広告運用で成約率1位"]]],"credit":"デザイン（原稿・写真はクライアント支給）","note":""},{"id":"gyoza","group":"case","num":"No.02","title":"東京餃子楼 ECサイトのメインビジュアル・商品ページ","tag":"食品・ECサイト","client":"東京餃子楼様","spec":"トップページ メインビジュアル（PC・スマホ連動）・商品ページ画像一式","main":[{"src":"images/gyoza-sp.jpg","cap":"トップページ メインビジュアル（スマホ版）"}],"headline":"ブランドの世界観を保ったまま、トップページから購入までを1本のストーリーで設計","story":"トップページのメインビジュアルで「銘柄豚 岩中豚100%」「無添加野菜」という素材の強みを示し、詳細・通販ページへの遷移を促した。遷移先の商品ページでは、メインビジュアルと同じ世界観の商品サムネイルに続けて、岩中豚と国産野菜の強み、他社との比較表、店舗の歴史までを一つの流れとして構成。デザインだけでなく、売上をつくるための構成・ライティングまで一貫して担当した。","points":["トップから購入までの導線","比較表で違いを見える化","構成・ライティングまで一貫"],"subs":[{"src":"images/gyoza-pc.jpg","cap":"メインビジュアル（PC版）","desc":"横長・縦長のどちらでも中央の文字が読めるよう、写真と文字の配置をデバイスごとに調整。","wide":true},{"src":"images/gyoza-ec.jpg","cap":"商品ページ画像","desc":"商品サムネイル、岩中豚の強み、国産野菜・小麦、比較表、店舗の歴史、ポイント還元までを順に見せる構成。","wide":true}],"brief":[["GOAL",["サイト訪問者に店舗とブランドを知ってもらう","「岩中豚」「無添加野菜」という素材の強みを伝え、詳細・通販ページへの遷移数を増やす","商品ページで違いを伝え、購入意欲を高める"]],["TARGET","素材や添加物にこだわり、自宅でも本格的な餃子を家族で楽しみたい人。"],["CONCEPT","食欲をそそる赤（暖色）をベースに、楽しさやワクワク感を演出するイエローをアクセントに配色。PC版の横長・スマホ版の縦長それぞれで中央の文字の読みやすさを保ちつつ、主役の餃子の写真が最も引き立つようにレイアウトを調整した。"]],"credit":"ディレクション／企画・構成・ライティング／デザイン","note":""},{"id":"udon","group":"case","num":"No.03","title":"子ども応援チケット 新規販促プロモーション","tag":"店舗ブランディング・集客","client":"讃岐うどん やまと（うどん大和・東京都板橋区）","spec":"A1ポスター・A4チラシ2種・応援チケット／台紙","main":[{"src":"images/udon-poster.jpg","cap":"A1ポスター（メイン）"}],"headline":"子ども応援チケットで親子連れの来店きっかけをつくり、リピートにつなげる店舗販促","story":"会社員男性が中心だった客層に、親子連れを呼び込むための施策として「子ども応援チケット」を企画。店頭のA1ポスターと、「使う人」「寄付で買う人」それぞれに向けた2種のチラシで来店のきっかけをつくった。アプリのスタンプカード（貯めると天ぷら無料）と組み合わせて再来店につなげ、客単価の向上とリピート来店の促進に貢献した。","points":["親子連れの新規来店","利用と寄付の循環","スタンプカードでリピート"],"subs":[{"src":"images/udon-flyer-a.jpg","cap":"A4チラシ｜支援者向け","desc":"「一緒に応援してください」と寄付購入をお願いする版。うどん小1杯500円から応援できることを明記。","wide":false},{"src":"images/udon-flyer-b.jpg","cap":"A4チラシ｜利用者向け","desc":"「チケットを使ってください」と親子での来店を促す版。使い方を3コマで見せ、「うどん小1杯無料」を大きく。","wide":false},{"src":"images/udon-ticket.jpg","cap":"子ども応援チケットと台紙（見本）","desc":"実際に使っていたチケット。台紙に貼り、感謝の気持ちを書いて店内に掲示できる。","wide":false},{"src":"images/udon-store.jpg","cap":"実店舗での掲載風景","desc":"店頭にポスター、店内の窓一面に応援チケットが並ぶ。（写真：食べログより引用）","wide":false}],"brief":[["GOAL",["新規客の獲得","客単価アップ","地域の子育て応援施策を知ってもらい、「利用する人」と「寄付で買う人」の循環をつくる"]],["TARGET","保育園のお迎え帰りで疲れているママ・パパ（利用者）と、取り組みに共感してくれる店舗近くの住民・事業者（支援者）。メインの客層だった会社員男性以外の、親子連れを取り込む。"],["CONCEPT","A1ポスター（グリーン）は、お迎え後にクタクタのママが「気になる」「立ち止まって読みたくなる」ことを目指し、「ごはんの用意も片付けもしなくていい。」と語りかけた。A4チラシ（水玉柄）は「チケットを使ってね」「チケットを買って寄付してね」の2パターンを企画・ライティングし、店舗近くの不動産屋・小児科・歯医者・保育園などにポスティング。親子連れを取り込む店舗のトータルディレクションを行った。"]],"credit":"ディレクション／企画・構成・ライティング（すべてのキャッチコピー・文章）／チラシデザイン","note":"※ 本店舗は移転・リニューアルのため現在は閉店し、オーナー様は別の場所で新店舗を盛況に営業されています。"},{"id":"noguchi","group":"case","num":"No.04","title":"オーガニック八百屋 販促・SDGs企画","tag":"地域循環プロジェクト・販促","client":"京都の野菜専門店 マルシェノグチ","spec":"A4チラシ2種・新聞メディア掲載","main":[{"src":"images/noguchi-kids.jpg","cap":"子ども応援スムージー チラシ"}],"headline":"ECサイト構築からメディア取材獲得までつなげた店舗ブランディング","story":"ツクツク！でのECサイト立ち上げから、店頭施策・ファン化施策までを一気通貫で伴走支援。店主様の想いを形にした「子ども応援チケット」を企画・発信した結果、SNSでの拡散やコミュニティ化にとどまらず、関西テレビ『となりの人間国宝さん』出演や『京都新聞』掲載など大きなメディア反響を獲得。リアル店舗からオンライン（定期宅配）への継続顧客の獲得を実現した。","points":["EC立ち上げから伴走","一気通貫ディレクション","メディア露出の獲得","店舗→定期宅配への導線"],"subs":[{"src":"images/noguchi-veg.jpg","cap":"旬のおまかせ野菜セット チラシ","desc":"実際の商品写真を使い、どんな野菜が届くのかイメージしやすいナチュラルなトーンに。","wide":false},{"src":"images/noguchi-news.jpg","cap":"京都新聞 掲載（2024年6月4日）","desc":"子ども応援スムージーの取り組みが紙面で紹介された。","wide":false}],"brief":[["GOAL",["旬のお野菜セットの新規定期購入の獲得","飲食店「うどん大和」で成功した地域貢献の仕組みを八百屋に横展開し、「子ども応援スムージー」として仕組み化・認知拡大する"]],["TARGET","安心できる有機野菜を食卓に取り入れたい家庭。子ども応援チラシは、すでに取り組みを知っている店舗周辺の住民・事業者。"],["CONCEPT","子育て応援チラシでは、チケットを手に笑う子どもたちの写真と「813杯提供」の実績で、取り組みが続いていることを可視化。配布先は仕組みを知っている方が多いため説明は割愛し、応援チケットの購入を促すことに絞った。"],["RESULT",["2024年、年間813杯のスムージーを子どもたちへ提供","『京都新聞』をはじめ複数のメディアに掲載","オーガニック検索からのサイト訪問をきっかけに、関西テレビ『よ～いドン！』の人気コーナー「となりの人間国宝さん」に出演。SEO対策が成果につながった"]]],"credit":"ディレクション／ECサイト立ち上げ支援（ツクツク！）／企画・構成・ライティング（すべてのキャッチコピー・文章）／デザイン","note":""},{"id":"corn","group":"case","num":"No.05","title":"高原とうもろこし「サニーショコラ」販促ツール","tag":"農業・販促","client":"信州 根羽村のとうもろこし農家","spec":"販促チラシ（表・裏）・美味しい食べ方ガイド・FAX注文用紙2種","main":[{"src":"images/corn-front.jpg","cap":"STEP 1｜販促チラシ 表面"}],"headline":"ターゲット別の3ステップ導線で、リピート率と顧客単価を最大化","story":"単発のチラシ配布で終わらせず、「認知・新規獲得」「同梱（美味しい食べ方・保存方法）」「定期便・リピート案内」という顧客育成シナリオにもとづき、3種類のツールを一括で提案。1つのクライアント様に対し、購入プロセスの各フェーズに合わせたデザインとコンテンツを展開し、LTV（顧客生涯価値）の向上に貢献した。","points":["顧客育成シナリオ設計","3種類の一括提案","LTV向上"],"subs":[{"src":"images/corn-back.jpg","cap":"STEP 1｜販促チラシ 裏面（認知・新規獲得）","desc":"根羽村の標高・寒暖差・森と水が甘さを育てることを、地図と3つの特徴で説明。","wide":false},{"src":"images/corn-guide.jpg","cap":"STEP 2｜美味しい食べ方と保存方法（商品に同梱）","desc":"イラストを多用し、調理法と保存方法が直感的にわかるガイドに。","wide":false},{"src":"images/corn-order-home.jpg","cap":"STEP 3｜FAX注文用紙・ご自宅用（リピート案内）","desc":"ご年配の方でも迷わず手書きできるよう、記入欄を広く確保。（振込先は伏せています）","wide":false},{"src":"images/corn-order-gift.jpg","cap":"STEP 3｜FAX注文用紙・贈答用（リピート案内）","desc":"お届け先が2件書けるよう「自宅用」と用紙を分けた。","wide":false}],"brief":[["GOAL",["購入者のリピート・口コミ促進","一件あたりの注文単価アップ","美味しい食べ方の提案","インターネットでの購入が苦手なシニア層からのFAX注文獲得"]],["TARGET","一度購入してくれたお客様（自宅用・贈答用のリピート）と、インターネットでの注文が苦手なシニア層。"],["CONCEPT","販促チラシでは、サニーショコラの魅力と、根羽村の高原と豊かな自然の中で育つからこそ生まれる甘みを表現。食べ方と保存方法のガイドはイラストで直感的に。FAX注文用紙は「自宅用」と「贈答用」を分け、十分な記入スペースを確保した。"]],"credit":"ディレクション／企画・構成・ライティング（キャッチコピー・文章作成）／チラシデザイン","note":""},{"id":"monokoto","group":"case","num":"No.06","title":"モノコトクリエ トップページ メインビジュアル","tag":"ホームページ制作・EC運営","client":"モノコトクリエ（まちのホームページ屋さん）","spec":"トップページ メインビジュアル 2パターン・ユーザー検証","main":[{"src":"images/monokoto-a.jpg","cap":"パターンA（スプラッシュ）"}],"headline":"2案をユーザー37名で検証し、主観ではなくユーザーの反応でデザインを決定","story":"クリエイティブ集団としての独自性・先進性を示すため、コンセプトの異なる2パターンを制作。実際のユーザー37名へのヒアリングで反応を定量・定性の両面から検証し、サイトの滞在時間と認知拡大に最も寄与するビジュアルを選んだ。","points":["2案の比較検証","ユーザー37名へのヒアリング","反応にもとづく意思決定"],"subs":[{"src":"images/monokoto-b.jpg","cap":"パターンB（レトロポップ）","desc":"イエロー背景とレトロな質感で、親しみやすさと楽しさを演出。","wide":true}],"brief":[["GOAL",["クリエイティブ集団としての独自性・先進性を示す","ターゲットの反応を検証し、滞在時間と認知拡大に最も寄与するビジュアルを選ぶ"]],["TARGET","新しい商品やサービスを売り出したい中小事業者・個人事業主。"],["CONCEPT","パターンA（スプラッシュ）は鮮やかなピンクとブルーで躍動感と先進性を表現し、検証ではターゲット層から高い評価と視覚的なインパクトを得た。パターンB（レトロポップ）はイエロー背景とレトロな質感で親しみやすさを演出。双方の検証を通じて、ユーザーのリアルな反応という事実にもとづいて最終デザインを決めた。"]],"credit":"ディレクション／企画・構成／デザイン／ユーザー検証","note":""},{"id":"olive","group":"flyer","num":"No.07","title":"最高峰EXVオリーブオイル 販促チラシ","tag":"調味料・販促","client":"株式会社ユーロパス × ファミリア・ズッカルディ","spec":"チラシ（表・裏）","main":[{"src":"images/olive-front.jpg","cap":"表面"}],"headline":"商品の付加価値を高め、EC・店頭での購買につなげる品質訴求","story":"一般的なオイルとの違い（無農薬栽培・早摘み・コールドプレス製法・母乳と同じオレイン酸）を裏面で6つの特長として整理し、高価格帯でも納得して購入いただけるストーリー構成を設計。「離乳食にそのまま使える」と具体的な使い道を示して購入のハードルを下げ、「家族の健康に投資するオイル」というコピーで毎日使い続ける理由を提示。表面に価格・送料無料・QRコードを集約し、手に取ったその場でECサイトへ進める導線をつくった。","points":["品質の差別化","脳科学にもとづく写真選び","その場でECへ進める導線"],"subs":[{"src":"images/olive-back.jpg","cap":"裏面","desc":"7年かけて開発した生産者の想いと、6つの特長をアイコンで整理。読む順に納得できる構成に。","wide":true}],"brief":[["GOAL",["国際コンテスト最優秀賞受賞・3つ星ホテル採用の生産者ズッカルディと、ユーロパス酒見さんのコラボ商品を国内で知ってもらう","ECサイトへの誘導"]],["TARGET","離乳食期の赤ちゃんを育てる家庭。子どもが口にするものの品質や安全性を大切にする保護者。"],["CONCEPT","ママは赤ちゃんの写真に惹かれやすいという脳科学的な傾向をふまえ、表面には赤ちゃんの笑顔の写真を大きく配置し、視線が商品と価格へ流れるように構成。そのうえで「世界最高峰の品質」という圧倒的な実績を表現。裏面では「我が子に安心して食べさせたい」と7年かけて開発した生産者の想いが、すぐに伝わるようにライティングした。高級感と親近感を両立させ、購入への納得感をつくっている。"],["RESULT",["このチラシを使い始めてから、卸先のお客様にも商品の特徴を伝えやすくなったと、クライアントから報告をいただいた"]]],"credit":"ディレクション／企画・構成・ライティング（すべてのキャッチコピー・文章）／チラシデザイン","note":"※ 紙面上の「送料無料」表記は制作当時のものです。現在のECサイトでは「1万円以上で送料無料」となっています。"},{"id":"hata","group":"flyer","num":"No.08","title":"端午の節句「名前旗」販売促進チラシ","tag":"伝統工芸品・通販","client":"京都西陣織元 もりさん","spec":"チラシ（片面）","main":[{"src":"images/hata.jpg","cap":"名前旗 チラシ"}],"headline":"オフライン配布からWeb・EC購入へのハードルを下げる導線設計","story":"安産祈願の名所・水天宮前での手渡し配布を想定し、認知にとどまらずECサイトでの注文獲得を狙った販促施策。高級感と信頼感を生むビジュアルに加え、購入時のサイズの不安や注文手順をステップ化して分かりやすく整理。Web購入への心理的な障壁を取り除く構成・ライティングを主導し、コンバージョン獲得に貢献した。","points":["オフライン→ECの導線設計","購入の不安を解消する構成","構成・ライティングを主導"],"subs":[],"brief":[["GOAL",["戌の日に水天宮前でプレママやご家族へ配布し、初節句を迎える家庭（親御様・祖父母様）に知ってもらう","豪華な購入者特典をフックに、ECサイトでの注文を獲得する"]],["TARGET","出産を控えたプレママとそのご家族。初めての節句を迎える家庭の親御様・祖父母様。"],["CONCEPT","ママやご家族が本能的に惹かれる赤ちゃんの笑顔の写真を主役に置き、視線が名前旗と価格・特典へ流れる配置に。京都西陣織や立体刺繍の「高級感・特別感」を伝えるため、和モダンで洗練された世界観に統一。購入時に迷いやすいサイズ感や注文手順をステップ形式で整理し、Web注文への心理的なハードルを下げる動線を設計した。"]],"credit":"ディレクション／企画・構成・ライティング（すべてのキャッチコピー・文章）／デザイン","note":""},{"id":"apple","group":"flyer","num":"No.09","title":"産地直送りんご 予約販売チラシ","tag":"農業・販促","client":"MORIMORI FARM（青森県弘前市）","spec":"チラシ（片面）・ロゴ","main":[{"src":"images/apple.jpg","cap":"予約販売チラシ"}],"headline":"産地・商品の差別化による購買意欲の喚起と、直販・ECへの導線","story":"他のりんごとの違い（味・こだわり・希少性）がひと目で伝わるキャッチコピーと構成で差別化。購入後の満足感をイメージさせるビジュアル展開により、贈答用・自分用の両方の需要を掘り起こし、直売所やECサイトでの注文獲得へと誘導した。","points":["商品の差別化","贈答用・自分用の需要喚起","直売所・ECへの導線"],"subs":[],"brief":[["GOAL",["数量限定の予約販売（5kg・4,000円）の注文獲得","樹齢80年の歴史やこだわりといった生産背景を伝え、ファンを増やす"]],["TARGET","旬の果物を産地から直接取り寄せたい家庭。つくり手の顔が見える食べものを選びたい人。"],["CONCEPT","りんごのシズル感を大胆に押し出しつつ、生産者の笑顔や岩木山の景色の写真を交えて「安心感・ブランドストーリー」を情緒的に表現。下部に価格やQRコードなどの必要情報をすっきり集約し、直感的に買いやすくした。"]],"credit":"ディレクション／企画・構成・ライティング（キャッチコピー・文章作成）／チラシ・ロゴデザイン","note":""},{"id":"rugby","group":"flyer","num":"No.10","title":"タグラグビーチーム 部員募集・体験会告知","tag":"スポーツ・部員募集","client":"都跡タグラグビークラブ","spec":"チラシ（片面）","main":[{"src":"images/rugby.jpg","cap":"部員募集チラシ"}],"headline":"保護者・子どものハードルを下げ、認知と体験参加を獲得","story":"「怪我をしそう」「難しそう」という保護者の懸念を払拭するため、安全性の高さと楽しさを前面に出した親しみやすい構成を提示。子どもが直感的に「楽しそう！」と感じるビジュアルと、保護者が安心して体験会に参加させられる情報設計で、新規部員の獲得と体験参加への誘導に貢献した。","points":["保護者の不安を解消","体験会への誘導","新規部員の獲得"],"subs":[],"brief":[["GOAL",["地域の小学生と保護者への認知拡大","体験会への参加と、新規入部者の獲得"]],["TARGET","地域の小学1〜6年生と、入部を検討するその保護者。"],["CONCEPT","子どもたちの躍動感あふれる写真をメインに配し、チームの「楽しさ」と「活気」を直感的にアピール。保護者が最も気にする「対象学年」「費用」「練習日時」などの必須情報を明確に整理し、親しみやすさと安心感を両立させた。"]],"credit":"ディレクション／企画・構成・ライティング（キャッチコピー・文章作成）／デザイン","note":""}],"lp":{"src":"images/logical-cooking-lp.jpg","cat":"料理教室・無料メール講座","title":"東大式ロジカルクッキング 無料メール講座LP","credit":"ライティング／デザイン／集客導線設計／ロゴデザイン","desc":["「感覚やセンスに頼らなくても料理は上達する」という講座の考え方を軸に、メディア掲載実績 → 料理の悩み → 解決策 → 選ばれる理由 → お客さまの声 → 登録特典 → 開発者メッセージの順に構成。無料メール講座への登録ボタンを複数の位置に置き、読み進めた先で迷わず申し込めるようにした。","講座のロゴ「Logical Cooking」も制作し、LPとロゴで世界観を揃えた。"],"url":"https://yukakosakai.com/logical_cooking/","urlText":"yukakosakai.com/logical_cooking/"},"mv":[{"cat":"いちご狩り体験予約・通販","title":"大谷農園様 トップページ","shots":[{"src":"images/otani-pc.jpg","cap":"大谷農園 PC版"},{"src":"images/otani-sp.jpg","cap":"大谷農園 スマホ版"}],"rows":[["目的","いちご狩りのシーズンオープンに合わせた新規予約の獲得と、ファミリー層・観光客への認知拡大。"],["工夫","主役のいちごの「みずみずしさ」を最優先に、大粒のいちごを大胆に配置。子育て世代やカップルが「行ってみたい」と直感的に思える安心感とワクワク感を両立した。"]],"link":null,"pair":true},{"cat":"観光サイト","title":"古都奈良おでかけ旅ガイド","shots":[{"src":"images/mv-nara.jpg","cap":"古都奈良おでかけ旅ガイド PC・スマホ"}],"rows":[["目的","奈良の観光情報・おでかけプランを探す人の目を引き、メディアとしての認知度と回遊率を上げる。"],["工夫","奈良の歴史と自然を感じる落ち着いたアースカラーの和モダン。文字を中央に、左右に旅の場面を置き、PC・スマホどちらでトリミングされてもキャッチコピーが読めるよう調整した。ロゴも制作。"]],"link":null,"pair":false},{"cat":"オンライン講座","title":"オンライン腸活講座","shots":[{"src":"images/mv-choukatsu.jpg","cap":"オンライン腸活講座 PC・スマホ"}],"rows":[["目的","健康意識の高い層に知ってもらい、講座への申込みにつなげる。"],["工夫","新鮮な食材のシズル感を主役に、ナチュラルで清潔感のある世界観に。PC・スマホの両方でキャッチコピーとレイアウトが崩れないよう設計した。"]],"link":null,"pair":false},{"cat":"オンラインレッスン","title":"ロースイーツ オンラインレッスン","shots":[{"src":"images/mv-rawsweets.jpg","cap":"ロースイーツ オンラインレッスン PC版"}],"rows":[["目的","ブランドの「幸福感」「上質さ」を伝え、女性のターゲット層の興味を引く。"],["工夫","淡いピンクのグラデーションとスイーツの配置を融合。余白を大胆に使った上品な文字配置で、大人かわいい世界観を表現した。"]],"link":null,"pair":false},{"cat":"ジュエリー","title":"アクセサリー作家さん","shots":[{"src":"images/mv-accessory.jpg","cap":"アクセサリー作家さん PC・スマホ"}],"rows":[["目的","高価格帯のジュエリーを求める人に向けて、ブランドの信頼感をつくる。"],["工夫","天然石ジュエリーの輝きを引き立てるミニマルなレイアウト。PC・スマホそれぞれで、静けさの中にある高級感を表現した。"]],"link":null,"pair":false},{"cat":"エステサロン","title":"横浜のエステサロン","shots":[{"src":"images/mv-esthe.jpg","cap":"エステサロン PC版 2パターン"}],"rows":[["目的","抜け感がなく重たい印象だった既存の自社サイトを改善し、女性が親しみを持ちやすいサロンに見せる。"],["工夫","余白を活かした軽やかなトーンに一新。「バイバイ、辛かったダイエット。」のコピーとともに、辛くないダイエットができることを印象づけた。"]],"link":null,"pair":false},{"cat":"ファッションスタイリスト","title":"ファッションスタイリスト MAYA様","shots":[{"src":"images/mv-maya.jpg","cap":"ファッションスタイリスト PC版"}],"rows":[["目的","スタイリストとしての世界観とセンスを、ひと目で伝える。"],["工夫","雑誌から出てきたようなファッショナブルなデザインを意識。MAYAさんのベースカラーであるブラックを基調にまとめた。"]],"link":null,"pair":false},{"cat":"Web集客支援","title":"TipSeed","shots":[{"src":"images/mv-tipseed.jpg","cap":"TipSeed PC・スマホ"}],"rows":[["目的","中小企業が集客の悩みを気軽に相談できる窓口として、信頼してもらう。"],["工夫","集客施策を手軽に取り入れられる親しみやすさと、「プロに任せられる」と感じる信頼感を両立したデザインにした。"]],"link":null,"pair":false},{"cat":"伝統工芸品・通販","title":"京都西陣織元 もりさん","shots":[{"src":"images/mv-morisan.jpg","cap":"もりさん PC・スマホ"}],"rows":[["目的","孫や子どもへの節句・お祝いに贈るのにふさわしい商品であることを伝える。"],["工夫","経済産業大臣指定伝統的工芸品 西陣織『伝統工芸士』の技が光る特別な贈り物であることを、重厚感のあるデザインで表現した。"]],"link":{"href":"#hata","text":"名前旗チラシ（No.08）と同じクライアントです。紙とWebで世界観を揃えています。"},"pair":false}],"ec":[{"cat":"農園・通販","title":"大谷農園様 通販商品ページ画像","shots":[{"src":"images/otani-ec.jpg","cap":"大谷農園 通販商品ページ画像"}],"rows":[["内容","無添加いちご酵素シロップと芋かりんとうの商品画像。成分・原材料の見せ方、かんたんレシピ、製造工程の写真まで、購入前の不安を順に解消する構成にした。"]],"link":{"href":"#mv","text":"同じ農園のトップページも制作しています。"},"pair":false},{"cat":"食品・ECサイト","title":"東京餃子楼様 商品ページ画像","shots":[{"src":"images/gyoza-ec.jpg","cap":"東京餃子楼 商品ページ画像"}],"rows":[],"link":{"href":"#gyoza","text":"詳しい設計のねらいは、代表事例 No.02 に掲載しています。"},"pair":false}],"logoProc":{"title":"おむすびカフェ 皐月屋 伏見宿｜5つの方向性を提案し、案2を採用","desc":"親しみやすさ、和の上品さ、モダン、筆文字など、方向性の違う5案を用意し、クライアントと一緒に比較しながらお店の世界観を決めていきました。","items":[{"src":"images/satsukiya-1.png","cap":"案1","adopted":false},{"src":"images/satsukiya-2.png","cap":"案2","adopted":true},{"src":"images/satsukiya-3.png","cap":"案3","adopted":false},{"src":"images/satsukiya-4.png","cap":"案4","adopted":false},{"src":"images/satsukiya-5.png","cap":"案5","adopted":false}]},"logos":[{"src":"images/logo-logical-cooking.png","cap":"東大式ロジカルクッキング"},{"src":"images/logo-nara-guide.png","cap":"古都奈良おでかけ旅ガイド"},{"src":"images/logo-monokoto.png","cap":"モノコトクリエ"},{"src":"images/logo-sekka.png","cap":"石華工房"},{"src":"images/logo-seo-monsters.png","cap":"SEO MONSTERS"},{"src":"images/logo-ogawa-photo.png","cap":"Ogawa Photo Works"},{"src":"images/logo-kamimura.png","cap":"不登校児ゼロ教師 かみむらこうすけ"}]};
 
 const STRENGTHS = [
   {t:"課題から逆算する企画力", d:"新規客がほしい、客単価を上げたい、リピートを増やしたい。まずクライアントの売上課題を整理し、誰に何をしてほしいのかを決めてから組み立てます。迷ったときは、ユーザーの反応を検証して決めます。", c:["udon","corn","monokoto"]},
@@ -814,6 +832,23 @@ const PROCESS = [
 
   /* ---- Deep link: /#gyoza opens that case ---- */
   const h = location.hash.slice(1); if (byId[h] !== undefined) openCase(byId[h]);
+})();
+
+// ---- 問い合わせフォーム ----
+(() => {
+  const f = document.getElementById("contactForm"), st = document.getElementById("cfStatus");
+  if (!f) return;
+  f.addEventListener("submit", async e => {
+    e.preventDefault();
+    if (!f.checkValidity()) { st.textContent = "未入力の項目か、メールアドレスの形式を確認してください。"; f.reportValidity(); return; }
+    if (!FORM_ENDPOINT) { st.textContent = "ただいまフォームの準備中です。"; return; }
+    st.textContent = "送信しています…";
+    try {
+      const r = await fetch(FORM_ENDPOINT, { method: "POST", body: new FormData(f), headers: { Accept: "application/json" } });
+      if (!r.ok) throw new Error();
+      f.reset(); st.textContent = "送信しました。内容を確認のうえ、ご連絡いたします。";
+    } catch { st.textContent = "送信できませんでした。時間をおいて、もう一度お試しください。"; }
+  });
 })();
 </script>
 </body>
